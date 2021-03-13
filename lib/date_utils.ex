@@ -1,5 +1,5 @@
 defmodule CompanyReportsAsyncEx.DateUtils do
-  @en_US [
+  @en_us [
     "January",
     "February",
     "March",
@@ -13,7 +13,7 @@ defmodule CompanyReportsAsyncEx.DateUtils do
     "November",
     "December"
   ]
-  @pt_BR [
+  @pt_br [
     "janeiro",
     "favereiro",
     "março",
@@ -32,8 +32,8 @@ defmodule CompanyReportsAsyncEx.DateUtils do
 
   def get_month_string(index, kind) when kind in @kinds and index >= 0 and index <= 12 do
     case kind do
-      "en-US" -> Enum.at(@en_US, index - 1)
-      "pt-BR" -> Enum.at(@pt_BR, index - 1)
+      "en-US" -> Enum.at(@en_us, index - 1)
+      "pt-BR" -> Enum.at(@pt_br, index - 1)
     end
   end
 

@@ -61,7 +61,7 @@ defmodule CompanyReportsAsyncEx do
     end)
   end
 
-  defp build_report_acc() do
+  defp build_report_acc do
     all_hours = Enum.into(@employees, %{}, &{&1, 0})
     hours_per_month = Enum.into(@employees, %{}, &{&1, %{}})
     hours_per_year = Enum.into(@employees, %{}, &{&1, %{}})
@@ -100,11 +100,4 @@ defmodule CompanyReportsAsyncEx do
 
   defp safe_sum(x, y) when is_nil(x), do: 0 + y
   defp safe_sum(x, y) when is_integer(x) when is_integer(y), do: x + y
-
-  # def get_unique_names(filename) do
-  #   filename
-  #   |> Parser.from_file()
-  #   |> Enum.map(&List.first/1)
-  #   |> Enum.uniq()
-  # end
 end
