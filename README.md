@@ -1,21 +1,25 @@
 # CompanyReportsAsyncEx
 
-**TODO: Add description**
+## Description
+
+Elixir application built to generate reports concurrently.
+
+## Challenge Requirements
+
+Implement a module to generate reports using concurrency and functional programing.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `company_reports_async_ex` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:company_reports_async_ex, "~> 0.1.0"}
-  ]
-end
+```bash
+$ mix deps.get
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/company_reports_async_ex](https://hexdocs.pm/company_reports_async_ex).
+## Running the app
 
+```bash
+# benchmark build vs build_async
+$ mix run test/benchmark.exs
+
+# tests with base cases
+$ mix test
+```
